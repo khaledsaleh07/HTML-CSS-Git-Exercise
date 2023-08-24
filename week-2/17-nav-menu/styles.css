@@ -1,1 +1,29 @@
 /* Write your media queries and flexbox CSS below */
+
+.site-headernavItem {
+  display: flex;
+  flex-direction: row;
+}
+
+@media (min-width: 481px) {
+  .site-headernavItem {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media (min-width: 701px) {
+  .site-headernavItem,
+  .site-header,
+  .site-headercheckout {
+    display: inline-block;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+@media (min-width: 993px) {
+  .site-header__checkout {
+    margin-left: auto;
+    display: inherit;
+  }
+}
