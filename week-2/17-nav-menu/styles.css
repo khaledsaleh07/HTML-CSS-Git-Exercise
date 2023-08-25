@@ -1,23 +1,38 @@
 /* Write your media queries and flexbox CSS below */
 
-.site-headernavItem {
+.site-header {
   display: flex;
   flex-direction: row;
 }
 
-@media (min-width: 481px) {
-  .site-headernavItem {
-    display: flex;
-    flex-direction: column;
+.site-header__logo {
+  flex: 1;
+}
+
+.site-header__nav {
+  flex: 3;
+  display: flex;
+}
+
+.site-header__checkout {
+  flex-wrap: wrap;
+  align-items: end;
+}
+
+@media screen and (max-width: 481px) {
+  .site-header {
+    display: block;
+  }
+  .site-header__nav {
+    display: block;
   }
 }
 
-@media (min-width: 701px) {
+/* @media (min-width: 701px) {
   .site-headernavItem,
   .site-header,
   .site-headercheckout {
-    display: inline-block;
-    flex-direction: column;
+    display: block;
     align-items: center;
   }
 }
@@ -26,4 +41,4 @@
     margin-left: auto;
     display: inherit;
   }
-}
+} */
